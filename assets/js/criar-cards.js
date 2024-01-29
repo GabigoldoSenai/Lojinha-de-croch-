@@ -1,7 +1,11 @@
-criarCardFirstCatalogue("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 2, "Baby", "5,00")
-criarCardFirstCatalogue("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 2, "Galinha", "15,00")
-criarCardFirstCatalogue("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 2, "Galinha", "15,00")
-criarCardFirstCatalogue("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 2, "Galinha", "15,00")
+criarCardFirstCatalogue("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
+criarCardFirstCatalogue("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
+criarCardFirstCatalogue("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 2, "Galinha", 15)
+criarCardFirstCatalogue("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 3, "Galinha", 15)
+criarCardFirstCatalogue("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
+criarCardFirstCatalogue("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
+criarCardFirstCatalogue("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 2, "Galinha", 15)
+criarCardFirstCatalogue("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 3, "Galinha", 15)
 
 function criarCardFirstCatalogue(imgURL, categCard, nameCard, priceCard) {
     const firstCatalogue = document.querySelector(".first.catalogue")
