@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lojinha de crochê | Paleta do Urso</title>
+    <link rel="icon" href="./assets/img/pata.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Mali:ital,wght@0,400;0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="https://kit.fontawesome.com/4f5c786c9e.js" crossorigin="anonymous"></script>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #popup {
+            display: none;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: white;
+            z-index: 1000;
+        }
+
+        #closeBtn {
+            cursor: pointer;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="./card.html">TESTE</a>
+    <button onclick="criarCard()">+</button>
+
+    <div id="popup">
+        <span id="closeBtn" onclick="fecharPopup()">&times;</span>
+        <img id="popupImagem" alt="Produto">
+        <h2 id="popupNome"></h2>
+        <p id="popupCategoria"></p>
+        <p id="popupPreco"></p>
+        <p id="popupDescricao"></p>
+    </div>
+    
+    <div class="card" onclick="abrirPopup('caminho/para/imagem.jpg', 'Circus Baby', 'Boneca média', '$20.00', 'Descrição do produto.')">
+        <img src="https://s2-casaejardim.glbimg.com/Gf-I095trHK9MXqMyC6wo78MQ90=/0x0:1400x788/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_a0b7e59562ef42049f4e191fe476fe7d/internal_photos/bs/2023/5/r/QWQmoSReWYvdfrVdJQgA/brinquedo-de-abelha-amarela-croche-amigurumi.jpg" alt="Produto">
+        <h2>Circus Baby</h2>
+        <p>Categoria: Boneca média</p>
+        <p>Preço: $20.00</p>
+    </div>
+
+    <header id="header">
+        <div class="logo">
+            <h1>Paleta do Urso</h1>
+            <p>Arte por encomenda</p>
+        </div>
+
+        <section class="btn-section">
+            <button class="social-media">
+                <i class="fa-brands fa-instagram"></i>
+            </button>
+            <button class="social-media">
+                <i class="fa-brands fa-youtube"></i>
+            </button>
+            <button>
+                ENCOMENDAR
+            </button>
+        </section>
+    </header>
+
+    <nav id="navbar">
+        <a href="#announcments">
+            <img src="./assets/img/pata.svg" alt="UP">
+        </a>
+        <ul>
+            <li>
+                <a href="#catalogo1">Prontos para entregar</a>
+            </li>
+            <li>
+                <a href="#catalogo2">Catálogo</a>
+            </li>
+            <li>
+                <a href="#call-to-action">Encomende aqui</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="home">
+        <section class="announcement"></section>
+
+        <section class="info-section">
+            <div class="info-box">
+                <div class="info-icon">
+                    <img src="./assets/img/pata.svg" alt="">
+                </div>
+                <div class="info-text">
+                    <h4>Info1</h4>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-icon">
+                    <img src="./assets/img/pata.svg" alt="">
+                </div>
+                <div class="info-text">
+                    <h4>Info1</h4>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-icon">
+                    <img src="./assets/img/pata.svg" alt="">
+                </div>
+                <div class="info-text">
+                    <h4>Info1</h4>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-icon">
+                    <img src="./assets/img/pata.svg" alt="">
+                </div>
+                <div class="info-text">
+                    <h4>Info1</h4>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="catalogo1">
+        <h1>Prontos para entregar</h1>
+
+        <section class="products-section">
+            <div class="product-card">
+                <div class="product-img"></div>
+                <div class="product-desc">
+                    <p>Categoria</p>
+                    <h3>Nome</h3>
+                    <p>R$xx,xx</p>
+                    <button>
+                        Pedir agora
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img"></div>
+                <div class="product-desc">
+                    <p>Categoria</p>
+                    <h3>Nome</h3>
+                    <p>R$xx,xx</p>
+                    <button>
+                        Pedir agora
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img"></div>
+                <div class="product-desc">
+                    <p>Categoria</p>
+                    <h3>Nome</h3>
+                    <p>R$xx,xx</p>
+                    <button>
+                        Pedir agora
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img"></div>
+                <div class="product-desc">
+                    <p>Categoria</p>
+                    <h3>Nome</h3>
+                    <p>R$xx,xx</p>
+                    <button>
+                        Pedir agora
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="catalogo2">
+        <h1>Catálogo geral</h1>
+
+        <section class="products-section">
+            <div class="product-card">
+                <div class="product-img"></div>
+                <div class="product-desc">
+                    <p>Categoria</p>
+                    <h3>Nome</h3>
+                    <p>R$xx,xx</p>
+                    <button>
+                        Pedir agora
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img"></div>
+                <div class="product-desc">
+                    <p>Categoria</p>
+                    <h3>Nome</h3>
+                    <p>R$xx,xx</p>
+                    <button>
+                        Pedir agora
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img"></div>
+                <div class="product-desc">
+                    <p>Categoria</p>
+                    <h3>Nome</h3>
+                    <p>R$xx,xx</p>
+                    <button>
+                        Pedir agora
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img"></div>
+                <div class="product-desc">
+                    <p>Categoria</p>
+                    <h3>Nome</h3>
+                    <p>R$xx,xx</p>
+                    <button>
+                        Pedir agora
+                    </button>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <div id="call-to-action">
+        <h1>Não achou o que queria? :(</h1>
+
+        <section class="announcement"></section>
+    </div>
+
+    <footer id="footer">
+        <ul class="column1">
+            <li class="footer-logo">
+                <img src="" alt="">
+            </li>
+            <li>
+                <h3>Minhas outras lojinhas:</h3>
+            </li>
+            <li>
+                <p>- Pinturas à óleo e desenhos digitais</p>
+            </li>
+            <li>
+                <p>- Sites super criativos</p>
+            </li>
+        </ul>
+        <ul class="column2">
+            <li>
+                <h3>Produtos</h3>
+            </li>
+            <li>
+                <p>AA</p>
+            </li>
+            <li>
+                <p>AA</p>
+            </li>
+            <li>
+                <p>AA</p>
+            </li>
+        </ul>
+        <ul class="column3">
+            <li>
+                <h3>Informações</h3>
+            </li>
+            <li>
+                <p>AA</p>
+            </li>
+            <li>
+                <p>AA</p>
+            </li>
+            <li>
+                <p>AA</p>
+            </li>
+        </ul>
+        <ul class="column4">
+            <li>
+                <h3>Contatos</h3>
+            </li>
+            <li>
+                <p>82 98895 0899</p>
+            </li>
+            <li>
+                <a href="#">Link WhatsApp</a>
+            </li>
+            <li>
+                <small>Horário de atendimento: 9h às 22h</small>
+            </li>
+
+            <section class="btn-section">
+                <button class="social-media">
+                    <i class="fa-brands fa-instagram"></i>
+                </button>
+                <button class="social-media">
+                    <i class="fa-brands fa-youtube"></i>
+                </button>
+                <button>
+                    ENCOMENDAR
+                </button>
+            </section>
+        </ul>
+    </footer>
+</body>
+
+<script src="./assets/js/criar-cards.js"> </script>
+</html>

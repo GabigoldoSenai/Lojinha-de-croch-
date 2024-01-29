@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARDS TEST</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <link rel="icon" href="./assets/img/pata.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Mali:ital,wght@0,400;0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="https://kit.fontawesome.com/4f5c786c9e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <a href="./index.html">VOLTAR</a>
+    
+    <div style="display:none;">
+    <dialog class="requestConcluded"> 
+        Seu pedido foi feito com sucesso
+        <button id="closePopup">Ok</button>
+    </dialog>
+
+    <div class="catalogue-wrapper 1">
+        <div class="card">
+            <div class="img"></div>
+            <div class="text">
+                <p id="categoryCrochet">Boneco(a) [G]</p>
+                <h2 id="nameCrochet">Circus Baby</h2>
+                <p id="priceCrochet">R$xx.00</p>
+            </div>
+            <button id="requestCrochet" onclick="requestCrochet(0, 3)">Pedir agora</button>
+        </div>
+    
+        <div class="card">
+            <div class="img"></div>
+            <div class="text">
+                <p id="categoryCrochet">Boneco(a) 14cm</p>
+                <h2 id="nameCrochet">Circus Baby</h2>
+                <p id="priceCrochet">R$xx.00</p>
+            </div>
+            <button id="requestCrochet" onclick="requestCrochet(1, 2)">Pedir agora</button>
+        </div>
+    </div>
+    </div>
+
+    <div id="first-catalogue">
+        
+    </div>
+
+
+</body>
+<script src="./assets/js/criar-cards.js"></script>
+</html>
