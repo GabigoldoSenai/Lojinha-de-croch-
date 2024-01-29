@@ -1,0 +1,114 @@
+.catalogue{
+    place-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+}
+
+.cardCrochet{
+    height: 400px;
+    min-width: 240px;
+    border-radius: 20px;
+    border: 3px solid var(--Brown);
+    background-color: var(--Light-yellow);
+    box-shadow: 0px 6px 0px 0px var(--Brown-shadow);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 5%;
+    margin: 10px;
+}
+
+.cardCrochet>img{
+    height: 50%;
+    width:100%;
+    border-radius: 10px;
+    border: 3px solid var(--Brown);
+    background-color: var(--Orange);
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardCrochet>.textCrochet{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.categoryCrochet,
+.priceCrochet {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color:var(--Orange);
+}
+
+.nameCrochet,
+.requestCrochet{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.requestCrochet{
+    color: var(--Light-yellow);
+    min-height: 60px;
+    text-transform: uppercase;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 3px solid var(--brown, #B06338);
+    background: var(--orange, #FFAB6F);
+    box-shadow: 0px 3px 0px 0px var(--brown, #B06338);
+    position:relative;
+}
+
+.requestCrochet:hover{
+    top: 1px;
+    box-shadow: 0px 2px 0px 0px var(--brown, #B06338);
+}
+
+.requestCrochet:active{
+    top: 3px;
+    color: var(--Brown-shadow);
+    box-shadow: 0px 0px 0px 0px var(--brown, #B06338);
+}
+
+@media (max-width: 609px) {
+    .categoryCrochet,
+    .priceCrochet {
+        font-size: 0.9rem;
+    }
+    
+    .nameCrochet,
+    .requestCrochet{
+        font-size: 1rem;
+    }
+
+    .cardCrochet{
+        height: 300px;
+        min-width: 175px;
+    }
+
+    .requestCrochet{
+        min-height: 45px;
+    }
+
+    .catalogue{
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    }
+}
+
+@media (max-width: 490px){
+    .requestCrochet{
+        font-size: 0.86rem;
+    }
+
+    .cardCrochet{
+        height: 250px;
+        min-width: 115px;
+    }
+
+    .catalogue{
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}

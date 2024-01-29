@@ -1,22 +1,27 @@
-criarCard("https://sarahmaker.com/wp-content/uploads/2021/07/how-to-double-crochet-24.jpg", 2, "Baby", "5,00",)
-criarCard("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 2, "Galinha", "15,00",)
+criarCardFirstCatalogue("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 2, "Baby", "5,00")
+criarCardFirstCatalogue("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 2, "Galinha", "15,00")
+criarCardFirstCatalogue("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 2, "Galinha", "15,00")
+criarCardFirstCatalogue("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 2, "Galinha", "15,00")
 
-function criarCard(imgURL, categCard, nameCard, priceCard) {
-    const firstCatalogue = document.querySelector("#first-catalogue")
+function criarCardFirstCatalogue(imgURL, categCard, nameCard, priceCard) {
+    const firstCatalogue = document.querySelector(".first.catalogue")
     
     const categories = [
-        "Chaveiro [C]",
+        "Chaveiro [K]",
         "Boneco(a) [P]",
         "Boneco(a) [M]",
         "Boneco(a) [G]"
     ]
 
-    let card = document.createElement("div")
-    card.classList.add("card")
+    let cardElement = document.createElement("div")
+    cardElement.classList.add("cardCrochet")
 
-    let img = document.createElement("img")
-    img.src = imgURL
-    img.alt = nameCard
+    let imgElement = document.createElement("img")
+    imgElement.src = imgURL
+    imgElement.alt = nameCard
+
+    let textElement = document.createElement("div")
+    textElement.classList.add("textCrochet")
 
     let categCardElement = document.createElement("p")
     categCardElement.textContent = `${categories[categCard]}`
@@ -34,10 +39,11 @@ function criarCard(imgURL, categCard, nameCard, priceCard) {
     requestCrochetBtn.textContent = "Pedir Agora"
     requestCrochetBtn.classList.add("requestCrochet")
 
-    firstCatalogue.appendChild(card)
-    card.appendChild(img)
-    card.appendChild(categCardElement)
-    card.appendChild(nameCardElement)
-    card.appendChild(priceCardElement)
-    card.appendChild(requestCrochetBtn)
+    firstCatalogue.appendChild(cardElement)
+    cardElement.appendChild(imgElement)
+    cardElement.appendChild(textElement)
+    textElement.appendChild(categCardElement)
+    textElement.appendChild(nameCardElement)
+    textElement.appendChild(priceCardElement)
+    cardElement.appendChild(requestCrochetBtn)
 }
