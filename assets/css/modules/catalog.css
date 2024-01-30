@@ -1,15 +1,15 @@
-.catalogue{
+.catalog{
     place-items: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .cardCrochet{
-    height: 400px;
+    height: 420px;
     min-width: 240px;
     border-radius: 20px;
     border: 3px solid var(--Brown);
-    background-color: var(--Light-yellow);
+    background-color: var(--White);
     box-shadow: 0px 6px 0px 0px var(--Brown-shadow);
     display: flex;
     flex-direction: column;
@@ -20,7 +20,6 @@
 
 .cardCrochet>img{
     height: 50%;
-    width:100%;
     border-radius: 10px;
     border: 3px solid var(--Brown);
     background-color: var(--Orange);
@@ -86,19 +85,19 @@
 
     .cardCrochet{
         height: 300px;
-        min-width: 170px;
+        min-width: 150px;
     }
 
     .requestCrochet{
         min-height: 45px;
     }
 
-    .catalogue{
+    .catalog{
         grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     }
 }
 
-@media (max-width: 490px){
+@media (max-width: 420px){
     .requestCrochet{
         font-size: 0.86rem;
     }
@@ -108,7 +107,7 @@
         min-width: 115px;
     }
 
-    .catalogue{
+    .catalog{
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
 }

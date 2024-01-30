@@ -1,14 +1,18 @@
-criarCardFirstCatalogue("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
-criarCardFirstCatalogue("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
-criarCardFirstCatalogue("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 2, "Galinha", 15)
-criarCardFirstCatalogue("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 3, "Galinha", 15)
-criarCardFirstCatalogue("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
-criarCardFirstCatalogue("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
-criarCardFirstCatalogue("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 2, "Galinha", 15)
-criarCardFirstCatalogue("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 3, "Galinha", 15)
+criarCardFirstCatalog("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
+criarCardFirstCatalog("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
+criarCardFirstCatalog("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
+criarCardFirstCatalog("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
+criarCardFirstCatalog("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
+criarCardFirstCatalog("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
+criarCardFirstCatalog("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
+criarCardFirstCatalog("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
+criarCardFirstCatalog("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
+criarCardFirstCatalog("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
+criarCardFirstCatalog("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
+criarCardFirstCatalog("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
 
-function criarCardFirstCatalogue(imgURL, categCard, nameCard, priceCard) {
-    const firstCatalogue = document.querySelector(".first.catalogue")
+function criarCardFirstCatalog(imgURL, categCard, nameCard, priceCard) {
+    const firstCatalog = document.querySelector(".first.catalog")
     
     const categories = [
         "Chaveiro [K]",
@@ -36,18 +40,22 @@ function criarCardFirstCatalogue(imgURL, categCard, nameCard, priceCard) {
     nameCardElement.classList.add("nameCrochet")
 
     let priceCardElement = document.createElement("p")
-    priceCardElement.textContent = `R$${priceCard}`
+    priceCardElement.textContent = `R$${priceCard.toFixed(2)}`
     priceCardElement.classList.add("priceCrochet")
 
-    let requestCrochetBtn = document.createElement("button")
-    requestCrochetBtn.textContent = "Pedir Agora"
-    requestCrochetBtn.classList.add("requestCrochet")
+    let knowMoreBtn = document.createElement("button")
+    knowMoreBtn.textContent = "Saiba mais"
+    knowMoreBtn.classList.add("requestCrochet")
+    knowMoreBtn.addEventListener("click", function() {
+        knowMore( imgURL ,nameCard, categories[categCard], priceCard);
+    });
 
-    firstCatalogue.appendChild(cardElement)
+
+    firstCatalog.appendChild(cardElement)
     cardElement.appendChild(imgElement)
     cardElement.appendChild(textElement)
     textElement.appendChild(categCardElement)
     textElement.appendChild(nameCardElement)
     textElement.appendChild(priceCardElement)
-    cardElement.appendChild(requestCrochetBtn)
+    cardElement.appendChild(knowMoreBtn)
 }

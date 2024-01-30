@@ -1,7 +1,9 @@
 @import url(./reset.css);
-@import url(./modules/catalogue.css);
+@import url(./modules/catalog.css);
+@import url(./modules/formPopup.css);
 
 :root{
+    --White: #fff;
     --Light-yellow: #FFF4C7;
     --Light-orange: #FFDEA3;
     --Orange: #FFAB6F;
@@ -12,18 +14,24 @@
 
 html, * {
     font-family: 'Mali', cursive;
-    background-color: var(--Light-yellow);
     color:var(--Brown);
 }
 
 body{
     padding:0 20px;
+    background-color: var(--Light-yellow);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    min-height: 100vh;
+}
+
+img{
+    width:100%;
 }
 
 h1{
-    font-family: 'Cherry Bomb One', system-ui;
+    font-weight: 700;
+    font-size: 1.5rem;
 }
+
 

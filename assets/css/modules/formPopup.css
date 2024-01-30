@@ -1,0 +1,137 @@
+.requestPopup{
+    width: 360px;
+    top:0;
+    right:0;
+    position:fixed;
+    z-index: 99;
+    overflow-y: scroll;
+    padding: 0;
+    max-height: 100vh;
+    background-color: var(--White);
+    border-left: 3px solid var(--Brown);
+}
+
+.requestPopup>.imgPopup{
+    width: 100%;
+    height: 350px;
+    border-bottom: 2px solid var(--Brown);
+}
+
+.closePopupBtn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    border: none;
+    font-size: 40px;
+    margin-left: 10px;
+    color: var(--Brown);
+    cursor: pointer;
+}
+
+.textPopup{
+    margin: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subtitlePopup{
+    font-size: 0.9rem;
+    color: var(--Brown-shadow)
+}
+
+.infoContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    gap: 10px;
+}
+
+.infoBox{
+    background-color: var(--Light-green);
+    border-radius: 10px;
+    width: 100px;
+    height: 85px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+}
+
+.infoBox>h3{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.infoBox>p{
+    font-size: 0.8rem;
+}
+
+.requestForm{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.requestForm>button{
+    background-color: var(--Orange);
+    margin-bottom: 50px;
+}
+
+.requestForm> input,
+.selectBox> select{
+    border: 2px solid var(--Brown);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.selectBox> select, 
+.selectBox>select>option{
+    outline: none;
+    width: 49%;
+    background-color: var(--Light-orange);
+    cursor: pointer;
+}
+
+.finishPopup{
+    background-color: var(--Orange);
+    border: 3px solid var(--Brown);
+    border-radius: 10px;
+    z-index: 99;
+    width: 320px;
+    height: 150px;
+    align-self: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.finishPopup> .textPopup{
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    gap: 10px;
+}
+
+.textPopup> p{
+    font-size: 0.9rem;
+}
+
+.logoPopup{
+    position:absolute;
+    top: -50px;
+    left: 35%;
+    width: 80px;
+    height: 80px;
+    background:
+        no-repeat 
+        center 
+        url(../../img/pata.svg)
+        ;
+    border: 3px solid var(--Brown);
+    border-radius: 50px;
+    padding: 10px;
+    background-color: var(--Light-yellow);
+}

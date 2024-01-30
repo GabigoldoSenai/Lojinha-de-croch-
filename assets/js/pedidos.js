@@ -20,44 +20,109 @@ const categoryCrochet = "Boneca média"
 let escolha = prompt("[A]: Catálogo\n [B]: Encomenda")
 */
 
-const requestCrochetBtn = document.querySelector("#requestCrochet")
+const requestCrochetBtn = document.querySelector("requestCrochet")
 const modal = document.querySelector("dialog")
-const closePopup = document.querySelector("#closePopup")
 
-function requestCrochet(nameNum, categoryNum, price) {
-    const nameCrochet = [
-        "a Circus Baby",
-        "o Pato", 
-        "o Yoda"]
-    
-    const categoryCrochet = [
-        "Chaveiro [C]",
-        "Boneco(a) [P]",
-        "Boneco(a) [M]",
-        "Boneco(a) [G]"
-    ]
+function knowMore(imgURL, nameCrochet, categCrochet, priceCrochet) {
+    const popupContainer = document.createElement('div');
+    popupContainer.classList.add("requestPopup");
 
-    const nameClient = prompt("Adicione o nome")
-    const typeDelivery = prompt("Adicione tipo de entrega")
-    const typePayment = prompt("Adicione tipo de pagamento")
+    const newHTML = `
+        <button class="closePopupBtn" onclick="closePopup()">&times;</button>
+        <img src="${imgURL}" class="imgPopup" alt="${nameCrochet}">
+        <div class="textPopup">
+            <p class="categoryCrochet">${categCrochet}</p>
+            <h2 class="nameCrochet">${nameCrochet}</h2>
+            <h3 class="subtitlePopup">Descrição:</h3>
+            <p>Tamanho: 14cm x 5cm</p>
+            <h3 class="subtitlePopup">Valor:</h3>
+            <h2 class="priceCrochet">${priceCrochet}</h2>
 
-        let message = `Oi! 👋 Meu nome é ${nameClient}, estou interessado no(a) ${categoryCrochet[categoryNum]} d${nameCrochet[nameNum]}. O tipo de entrega que eu quero é ${typeDelivery} e o pagamento será feito com ${typePayment}`
+            <h3 class="subtitlePopup">Informações:</h3>
+            <div class="infoContainer">
+                <div class="infoBox">
+                    <h3>Parcelamento para compras +R$50</h3>
+                    <p>Até 2x no PIX</p>
+                </div>
+                <div class="infoBox">
+                    <h3>Entrega presencial de GRAÇA</h3>
+                    <p>Exclusivo para estudantes SESI EBEP</p>
+                </div>
+                <div class="infoBox">
+                    <h3>Frete de acordo com localização</h3>
+                    <p>Delivery somente em Maceió</p>
+                </div>
+                <div class="infoBox">
+                    <h3>Com amigos tem desconto</h3>
+                    <p>Para compras de no mínimo 3 crochês você ganha 20% off</p>
+                </div>
+            </div>
 
-        linkWhatsapp = `https://api.whatsapp.com/send?phone=+5582988950899&text=` + encodeURIComponent(message)
+            <h3 class="subtitlePopup">Preencha os dados</h3>
+            <form class="requestForm">
+                <input type="text" class="getNameClient" required placeholder="Seu Nome/Apelido">
+                <input type="number" class="getQntCrochet" required placeholder="Quantidade">
 
-        window.location.href = linkWhatsapp;
+                <div class="selectBox">
+                    <select id="getTypeDelivery" required>
+                        <option selected value="null">Entrega</option>
+                        <option value="Delivery">Delivery</option>
+                        <option value="Presencial">Presencial</option>
+                    </select>
 
-        modal.showModal()
+                    <select id="getTypePayment" name="getTypePayment" required>
+                        <option selected value="null">Pagamento</option>
+                        <option value="PIX">PIX</option>
+                        <option value="Dinheiro">Dinheiro</option>
+                    </select>
+                </div>
+
+                <button type="button" class="requestCrochet">Enviar Pedido</button>
+            </form>
+        </div>
+    `;
+
+    popupContainer.innerHTML = newHTML;
+
+    // Event delegation for dynamically created elements
+    popupContainer.addEventListener("click", function(event) {
+        if (event.target.classList.contains("requestCrochet")) {
+            const nameClient = document.querySelector(".getNameClient").value;
+            const qntCrochet = document.querySelector(".getQntCrochet").value;
+            const typeDelivery = document.querySelector("#getTypeDelivery").value;
+            const typePayment = document.querySelector("#getTypePayment").value;
+
+            requestCrochet(nameCrochet, categCrochet, priceCrochet, nameClient, qntCrochet, typePayment, typeDelivery);
+        }
+    });
+
+    // Append the popupContainer to the document or wherever appropriate
+    document.body.appendChild(popupContainer);
+
+    document.addEventListener("click", function(event) {
+        if (!modal.contains(event.target) && !requestCrochetBtn.contains(event.target)) {
+            // Se o clique ocorreu fora do modal e fora do botão que abre o modal
+            closePopup();
+        }
+    });
 }
 
-closePopup.onclick = function() {
-    modal.close()
-}
 
-function mensagemCatalogo(nameCrochet, categoryCrochet, nameClient, typeDelivery, typePayment){
-    let message = `Oi! 👋 Meu nome é ${nameClient}, estou interessado no(a) ${categoryCrochet} de ${nameCrochet}. O tipo de entrega que eu quero é ${typeDelivery} e o pagamento será feito com ${typePayment}`
+
+function requestCrochet(nameCrochet, categCrochet, priceCrochet, nameClient, qntCrochet, typePayment, typeDelivery) {
+    alert(`${nameCrochet} ${categCrochet} ${priceCrochet} ${nameClient} ${qntCrochet} ${typePayment} ${typeDelivery}`)
+
+    let message = `Oi! 👋 Meu nome é ${nameClient}, estou interessado no(a) ${categCrochet} de ${nameCrochet}. O tipo de entrega que eu quero é ${typeDelivery} e o pagamento será feito com ${typePayment}`
 
     linkWhatsapp = `https://api.whatsapp.com/send?phone=+5582988950899&text=` + encodeURIComponent(message)
 
-    return linkWhatsapp
+    
+
+    window.location.href = linkWhatsapp;
+}
+
+function closePopup() {
+    const requestCrochetPopup = document.querySelector(".requestPopup")
+
+    requestCrochetPopup.remove()
 }
