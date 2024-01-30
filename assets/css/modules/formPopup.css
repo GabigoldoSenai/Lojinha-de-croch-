@@ -97,10 +97,10 @@
 .finishPopup{
     background-color: var(--Orange);
     border: 3px solid var(--Brown);
-    border-radius: 10px;
+    border-radius: 30px;
     z-index: 99;
     width: 320px;
-    height: 150px;
+    height: 250px;
     align-self: center;
     position: fixed;
     top: 50%;
@@ -109,22 +109,28 @@
 }
 
 .finishPopup> .textPopup{
-    width: 100%;
-    margin-top: 50px;
+    margin: 50px 20px;
     text-align: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .textPopup> p{
     font-size: 0.9rem;
+    line-height: 20px;
+}
+
+.textPopup>button{
+    background-color: var(--Light-green);
+    color: var(--Brown);
+    border-radius: 30px;
 }
 
 .logoPopup{
     position:absolute;
     top: -50px;
-    left: 35%;
-    width: 80px;
-    height: 80px;
+    left: 36%;
+    width: 60px;
+    height: 60px;
     background:
         no-repeat 
         center 

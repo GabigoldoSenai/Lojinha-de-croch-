@@ -77,7 +77,7 @@ function knowMore(imgURL, nameCrochet, categCrochet, priceCrochet) {
                     </select>
                 </div>
 
-                <button type="button" class="requestCrochet">Enviar Pedido</button>
+                <button type="button" class="requestCrochet">Criar Pedido</button>
             </form>
         </div>
     `;
