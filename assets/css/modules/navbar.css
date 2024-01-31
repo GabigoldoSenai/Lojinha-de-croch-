@@ -1,0 +1,29 @@
+#navbar{
+    padding: 15px 3%;
+    height: 50px;
+    background-color: var(--Orange);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+#navbar>ul{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 35px;
+}
+
+.nav-link{
+    color: var(--Light-yellow);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.nav-link>img{
+    max-width: 45px;
+}

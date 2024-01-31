@@ -1,19 +1,9 @@
-criarCardFirstCatalog("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
-criarCardFirstCatalog("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
-criarCardFirstCatalog("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
-criarCardFirstCatalog("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
-criarCardFirstCatalog("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
-criarCardFirstCatalog("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
-criarCardFirstCatalog("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
-criarCardFirstCatalog("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
-criarCardFirstCatalog("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
-criarCardFirstCatalog("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
-criarCardFirstCatalog("https://m.media-amazon.com/images/I/71h-FOjlXsL._AC_UF894,1000_QL80_.jpg", 0, "Baby", 15)
-criarCardFirstCatalog("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes3bgT0tVBc494pWnLAYcp64JNA2G0nbjOw&usqp=CAU", 1, "Galinha", 15)
 
-function criarCardFirstCatalog(imgURL, categCard, nameCard, priceCard) {
+
+function criarCardFirstCatalog(catalogNum, imgURL, categCard, descCard, nameCard, priceCard) {
     const firstCatalog = document.querySelector(".first.catalog")
-    
+    const secondCatalog = document.querySelector(".second.catalog")
+
     const categories = [
         "Chaveiro [K]",
         "Boneco(a) [P]",
@@ -47,11 +37,15 @@ function criarCardFirstCatalog(imgURL, categCard, nameCard, priceCard) {
     knowMoreBtn.textContent = "Saiba mais"
     knowMoreBtn.classList.add("requestCrochet")
     knowMoreBtn.addEventListener("click", function() {
-        knowMore( imgURL ,nameCard, categories[categCard], priceCard);
+        knowMore( imgURL ,nameCard, categories[categCard], descCard, priceCard);
     });
 
-
-    firstCatalog.appendChild(cardElement)
+    if(catalogNum === 1){
+        firstCatalog.appendChild(cardElement)
+    }else{
+        secondCatalog.appendChild(cardElement)
+    }
+    
     cardElement.appendChild(imgElement)
     cardElement.appendChild(textElement)
     textElement.appendChild(categCardElement)

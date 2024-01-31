@@ -1,0 +1,55 @@
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 3%;
+    align-items: center;
+}
+
+.logo-header{
+    width: 360px;
+}
+
+.social-media,
+.order-crochet{
+    height: 45px;
+    width: 45px;
+    font-size: 20px;
+    color: var(--Light-yellow);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 3px solid var(--brown, #B06338);
+    background: var(--orange, #FFAB6F);
+    box-shadow: 0px 3px 0px 0px var(--brown, #B06338);
+    position:relative;
+}
+
+.order-crochet{
+    width: 215px;
+    background-color: var(--Light-green);
+    color: var(--Brown);
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+
+.social-media:hover,
+.order-crochet:hover{
+    top: 1px;
+    box-shadow: 0px 2px 0px 0px var(--brown, #B06338);
+}
+
+.social-media:active,
+.order-crochet:active{
+    top: 3px;
+    color: var(--Brown-shadow);
+    box-shadow: 0px 0px 0px 0px var(--brown, #B06338);
+    background-color: var(--Light-orange);
+}
+
+.btn-section{
+    display: flex;
+    gap: 35px;
+
+}

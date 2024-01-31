@@ -1,7 +1,14 @@
+#products-to-sell,
+#products-to-request{
+    background-color: var(--Light-orange);
+    padding: 0 50px;
+}
+
 .catalog{
     place-items: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    margin: 50px 0;
 }
 
 .cardCrochet{
@@ -72,7 +79,13 @@
     box-shadow: 0px 0px 0px 0px var(--brown, #B06338);
 }
 
-@media (max-width: 620px) {
+@media (max-width: 720px) {
+    #products-to-sell,
+    #products-to-request{
+        background-color: var(--Light-orange);
+        padding: 0 5%;
+    }
+
     .categoryCrochet,
     .priceCrochet {
         font-size: 0.9rem;
@@ -97,7 +110,7 @@
     }
 }
 
-@media (max-width: 420px){
+@media (max-width: 425px){
     .requestCrochet{
         font-size: 0.86rem;
     }

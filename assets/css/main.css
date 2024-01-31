@@ -1,6 +1,9 @@
 @import url(./reset.css);
+@import url(./modules/float-wpp.css);
+@import url(./modules/header.css);
 @import url(./modules/catalog.css);
 @import url(./modules/formPopup.css);
+@import url(./modules/navbar.css);
 
 :root{
     --White: #fff;
@@ -15,14 +18,15 @@
 html, * {
     font-family: 'Mali', cursive;
     color:var(--Brown);
+    scroll-behavior: smooth;
 }
 
 body{
-    padding:0 20px;
     background-color: var(--Light-yellow);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    
 }
 
 img{
@@ -33,5 +37,4 @@ h1{
     font-weight: 700;
     font-size: 1.5rem;
 }
-
 

@@ -13,56 +13,20 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css">
     <script src="https://kit.fontawesome.com/4f5c786c9e.js" crossorigin="anonymous"></script>
-    <style>
-        .card {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px;
-            cursor: pointer;
-        }
-
-        #popup {
-            display: none;
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            border: 1px solid #ccc;
-            padding: 20px;
-            background-color: white;
-            z-index: 1000;
-        }
-
-        #closeBtn {
-            cursor: pointer;
-            float: right;
-        }
-    </style>
 </head>
 
 <body>
-    <a href="./card.html">TESTE</a>
-    <button onclick="criarCard()">+</button>
 
-    <div id="popup">
-        <span id="closeBtn" onclick="fecharPopup()">&times;</span>
-        <img id="popupImagem" alt="Produto">
-        <h2 id="popupNome"></h2>
-        <p id="popupCategoria"></p>
-        <p id="popupPreco"></p>
-        <p id="popupDescricao"></p>
-    </div>
-    
-    <div class="card" onclick="abrirPopup('caminho/para/imagem.jpg', 'Circus Baby', 'Boneca média', '$20.00', 'Descrição do produto.')">
-        <img src="https://s2-casaejardim.glbimg.com/Gf-I095trHK9MXqMyC6wo78MQ90=/0x0:1400x788/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_a0b7e59562ef42049f4e191fe476fe7d/internal_photos/bs/2023/5/r/QWQmoSReWYvdfrVdJQgA/brinquedo-de-abelha-amarela-croche-amigurumi.jpg" alt="Produto">
-        <h2>Circus Baby</h2>
-        <p>Categoria: Boneca média</p>
-        <p>Preço: $20.00</p>
-    </div>
+    <a href="https://api.whatsapp.com/send?phone=+5582988950899&text=Oiii+👋+vim+do+site+de+crochê" target="_blank" class="float" aria-label="WhatsApp" >
+        <svg class="icon">
+            <path d="M.33,48.33,3.06,35.62A23.67,23.67,0,0,1,0,24,24.06,24.06,0,0,1,24.12,0h0a23.95,23.95,0,1,1,0,47.89,24.33,24.33,0,0,1-11-2.61ZM13.7,41.08l.67.36a20.3,20.3,0,0,0,9.74,2.49A20,20,0,1,0,4,24a19.78,19.78,0,0,0,2.89,10.3l.41.68L5.52,43Z" />
+            <path d="M34.67,31.75C34.22,33,32,34.21,31,34.31S30,35.12,24.5,33s-9-7.77-9.27-8.13S13,21.92,13,19.27a6.08,6.08,0,0,1,1.89-4.5,2,2,0,0,1,1.45-.67c.36,0,.72.05,1,.05s.77-.18,1.22.9,1.54,3.72,1.67,4a1,1,0,0,1,.05.95,3.53,3.53,0,0,1-.54.89c-.28.32-.58.71-.82.95s-.55.56-.24,1.09a16.48,16.48,0,0,0,3,3.73,14.93,14.93,0,0,0,4.37,2.68c.54.26.86.22,1.17-.14s1.36-1.58,1.72-2.12.72-.45,1.22-.26,3.17,1.47,3.71,1.74.9.41,1,.63A4.4,4.4,0,0,1,34.67,31.75Z" />
+        </svg>
+    </a>
 
     <header id="header">
-        <div class="logo">
-            <h1>Paleta do Urso</h1>
-            <p>Arte por encomenda</p>
+        <div class="logo-header">
+            <img src="./assets/img/logo-header.svg" alt="">
         </div>
 
         <section class="btn-section">
@@ -72,7 +36,7 @@
             <button class="social-media">
                 <i class="fa-brands fa-youtube"></i>
             </button>
-            <button>
+            <button class="order-crochet">
                 ENCOMENDAR
             </button>
         </section>
@@ -80,17 +44,25 @@
 
     <nav id="navbar">
         <a href="#announcments">
-            <img src="./assets/img/pata.svg" alt="UP">
+            <div class="logo-navbar"></div>
         </a>
         <ul>
-            <li>
-                <a href="#catalogo1">Prontos para entregar</a>
+            <li class="up-btn">
+                <a class="nav-link" href="#products-to-sell">
+                    <img src="./assets/img/pata-white.svg" alt="">
+                </a>
             </li>
             <li>
-                <a href="#catalogo2">Catálogo</a>
+                <a class="nav-link" href="#products-to-sell">Vitrine</a>
             </li>
             <li>
-                <a href="#call-to-action">Encomende aqui</a>
+                <a class="nav-link" href="#products-to-request">Catálogo</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#call-to-action">Personalizados</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#footer">+Info</a>
             </li>
         </ul>
     </nav>
@@ -101,7 +73,6 @@
         <section class="info-section">
             <div class="info-box">
                 <div class="info-icon">
-                    <img src="./assets/img/pata.svg" alt="">
                 </div>
                 <div class="info-text">
                     <h4>Info1</h4>
@@ -111,7 +82,6 @@
 
             <div class="info-box">
                 <div class="info-icon">
-                    <img src="./assets/img/pata.svg" alt="">
                 </div>
                 <div class="info-text">
                     <h4>Info1</h4>
@@ -121,7 +91,6 @@
 
             <div class="info-box">
                 <div class="info-icon">
-                    <img src="./assets/img/pata.svg" alt="">
                 </div>
                 <div class="info-text">
                     <h4>Info1</h4>
@@ -131,7 +100,6 @@
 
             <div class="info-box">
                 <div class="info-icon">
-                    <img src="./assets/img/pata.svg" alt="">
                 </div>
                 <div class="info-text">
                     <h4>Info1</h4>
@@ -141,114 +109,19 @@
         </section>
     </main>
 
-    <div id="catalogo1">
-        <h1>Prontos para entregar</h1>
-
-        <section class="products-section">
-            <div class="product-card">
-                <div class="product-img"></div>
-                <div class="product-desc">
-                    <p>Categoria</p>
-                    <h3>Nome</h3>
-                    <p>R$xx,xx</p>
-                    <button>
-                        Pedir agora
-                    </button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img"></div>
-                <div class="product-desc">
-                    <p>Categoria</p>
-                    <h3>Nome</h3>
-                    <p>R$xx,xx</p>
-                    <button>
-                        Pedir agora
-                    </button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img"></div>
-                <div class="product-desc">
-                    <p>Categoria</p>
-                    <h3>Nome</h3>
-                    <p>R$xx,xx</p>
-                    <button>
-                        Pedir agora
-                    </button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img"></div>
-                <div class="product-desc">
-                    <p>Categoria</p>
-                    <h3>Nome</h3>
-                    <p>R$xx,xx</p>
-                    <button>
-                        Pedir agora
-                    </button>
-                </div>
-            </div>
-        </section>
+    <div id="products-to-sell">
+        <h1>Primeiro catálogo</h1>
+        <div  class="first catalog">
+        </div>
     </div>
 
-    <div id="catalogo2">
-        <h1>Catálogo geral</h1>
+    <div id="products-to-request">
+        <h1>Segundo catálogo</h1>
 
-        <section class="products-section">
-            <div class="product-card">
-                <div class="product-img"></div>
-                <div class="product-desc">
-                    <p>Categoria</p>
-                    <h3>Nome</h3>
-                    <p>R$xx,xx</p>
-                    <button>
-                        Pedir agora
-                    </button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img"></div>
-                <div class="product-desc">
-                    <p>Categoria</p>
-                    <h3>Nome</h3>
-                    <p>R$xx,xx</p>
-                    <button>
-                        Pedir agora
-                    </button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img"></div>
-                <div class="product-desc">
-                    <p>Categoria</p>
-                    <h3>Nome</h3>
-                    <p>R$xx,xx</p>
-                    <button>
-                        Pedir agora
-                    </button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img"></div>
-                <div class="product-desc">
-                    <p>Categoria</p>
-                    <h3>Nome</h3>
-                    <p>R$xx,xx</p>
-                    <button>
-                        Pedir agora
-                    </button>
-                </div>
-            </div>
-
-        </section>
+        <div id="to-request" class="second catalog">
+        </div>
     </div>
+    
 
     <div id="call-to-action">
         <h1>Não achou o que queria? :(</h1>
@@ -329,4 +202,6 @@
 </body>
 
 <script src="./assets/js/criar-cards.js"> </script>
+<script src="./assets/js/pedidos.js"> </script>
+<script src="./assets/js/commands.js"> </script>
 </html>
