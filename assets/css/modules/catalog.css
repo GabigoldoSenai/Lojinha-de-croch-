@@ -2,18 +2,24 @@
 #products-to-request{
     background-color: var(--Light-orange);
     padding: 0 50px;
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
 }
 
 .catalog{
     place-items: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     margin: 50px 0;
+    gap: 10px;
+    width: 90%;
+    align-self: center;
 }
 
 .cardCrochet{
-    height: 420px;
-    min-width: 240px;
+    height: 377px;
+    min-width: 198px;
     border-radius: 20px;
     border: 3px solid var(--Brown);
     background-color: var(--White);

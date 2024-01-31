@@ -1,20 +1,43 @@
 #navbar{
-    padding: 15px 3%;
-    height: 50px;
+    padding: 15px 60px;
+    height: 35px;
     background-color: var(--Orange);
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
     overflow: hidden;
+    z-index: 98;
+    top: 94px;
+    position: absolute;
+    width: 100%;
+    border-top: 3px solid var(--Brown);
+    border-bottom: 3px solid var(--Brown);
 }
 
-#navbar>ul{
+.navbar-links{
     display: flex;
     align-items: center;
     width: 100%;
     gap: 35px;
+    transition: all .3s ease-in-out;
+    transform: translateX(-90px)
 }
+
+
+
+.up-btn {
+    position: relative;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+}
+
+.up-btn.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
 
 .nav-link{
     color: var(--Light-yellow);

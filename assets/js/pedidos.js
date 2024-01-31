@@ -38,26 +38,6 @@ function knowMore(imgURL, nameCrochet, categCrochet, descCrochet, priceCrochet) 
             <h3 class="subtitlePopup">Valor:</h3>
             <h2 class="priceCrochet">R$${priceCrochet.toFixed(2)}</h2>
 
-            <h3 class="subtitlePopup">Informações:</h3>
-            <div class="infoContainer">
-                <div class="infoBox">
-                    <h3>Parcelamento até 2x</h3>
-                    <p>50% antes da produção e 50% antes da entrega</p>
-                </div>
-                <div class="infoBox">
-                    <h3>Entrega presencial de GRAÇA</h3>
-                    <p>Exclusivo para estudantes SESI EBEP</p>
-                </div>
-                <div class="infoBox">
-                    <h3>Frete de acordo com localização</h3>
-                    <p>Delivery somente em Maceió</p>
-                </div>
-                <div class="infoBox">
-                    <h3>Com amigos tem desconto</h3>
-                    <p>Para compras de no mínimo 5 crochês você ganha 10% off</p>
-                </div>
-            </div>
-
             <h3 class="subtitlePopup">Preencha os dados</h3>
             <form class="requestForm">
                 <input type="text" class="getNameClient" required placeholder="Seu Nome/Apelido">
@@ -103,7 +83,7 @@ function knowMore(imgURL, nameCrochet, categCrochet, descCrochet, priceCrochet) 
 
                 if (!nameClient || nameClient === "null" || !qntCrochet || qntCrochet === "null" ||
             !typeDelivery || typeDelivery === "null" || !typePayment || typePayment === "null") {
-            alert("Por favor, preencha todos os campos antes de enviar o pedido.");
+            alert("Por favor, preencha todos os campos corretamente antes de enviar o pedido.");
             return; 
         }
             requestCrochet(nameCrochet, categCrochet, priceCrochet, nameClient, qntCrochet, typePayment, typeDelivery);

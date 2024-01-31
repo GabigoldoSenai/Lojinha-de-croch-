@@ -1,0 +1,84 @@
+#home,
+#call-to-action{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    gap: 30px;
+    padding-top: 35px;
+}
+
+#home{
+    justify-content: space-between;
+    margin-top: 60px;
+    padding-bottom: 15px;
+}
+
+#call-to-action>h1{
+    width: 80%;
+}
+
+.announcement{
+    margin-top: 20px;
+    width: 80%;
+    height: 70%;
+    background-color: var(--Light-orange);
+    background: 
+        url(../../img/Placeholder-banner.png)
+        no-repeat
+        center
+    ;
+    background-size: 100% 100%;
+    border-radius: 15px;
+    border: 3px solid var(--Brown)
+}
+
+.infoContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoContainer.home{
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+.infoContainer.home>.info-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 20%;
+    width: auto;
+    height: 65px;
+}
+
+.infoContainer.home>.info-box>.info-icon{
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--Light-orange);
+    border-radius: 50px;
+    border: 2px solid var(--Brown);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-text{
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-text>h3{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.info-text>p{
+    font-size: 0.8rem;
+}
