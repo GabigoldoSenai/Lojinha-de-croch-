@@ -42,35 +42,6 @@
     color: var(--Brown-shadow)
 }
 
-.infoContainer{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
-    gap: 10px;
-}
-
-.info-box{
-    background-color: var(--Light-green);
-    border-radius: 10px;
-    width: 100px;
-    height: 85px;
-    padding: 15px;
-}
-
-.info-box{
-    display: flex;
-    flex-direction: column;
-    gap:6px;
-}
-
-.info-box>h3{
-    font-size: 0.9rem;
-    font-weight: 700;
-}
-
-.info-box>p{
-    font-size: 0.8rem;
-}
-
 .requestForm{
     display: flex;
     flex-direction: column;

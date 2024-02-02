@@ -8,6 +8,15 @@
 
 .logo-header{
     width: 360px;
+    margin-right: 45px;
+}
+
+.device{
+    display: inherit;
+}
+
+.mobile{
+    display: none;
 }
 
 .social-media,
@@ -23,6 +32,9 @@
     background: var(--orange, #FFAB6F);
     box-shadow: 0px 3px 0px 0px var(--brown, #B06338);
     position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .order-crochet{
@@ -31,9 +43,6 @@
     color: var(--Brown);
     border-radius: 30px;
     font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 
@@ -54,4 +63,19 @@
 .btn-section{
     display: flex;
     gap: 35px;
+}
+
+@media (max-width: 845px) {
+    .device{
+        display: none;
+    }
+
+    #header{
+        flex-direction: column;
+    }
+
+    .mobile{
+        display: inherit;
+        max-height: 50px;
+    }
 }

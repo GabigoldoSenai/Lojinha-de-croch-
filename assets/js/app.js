@@ -16,11 +16,22 @@ function scrollFunction() {
         navbar.style.top = "0";
     } else if(document.body.scrollTop >= 47 || document.documentElement.scrollTop >= 47){
         upBtn.classList.add("visible");
-        navbarLinks.style.transform = "translateX(0)";
     }else{
-        navbarLinks.style.transform = "translateX(-70px)";
         navbar.style.position = "absolute";
         navbar.style.top = "94px";
         upBtn.classList.remove("visible");
     }
 }
+
+document.querySelectorAll('#navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        const targetOffset = targetElement.offsetTop - 70; 
+
+        window.scrollTo({
+            top: targetOffset,
+        });
+    });
+});

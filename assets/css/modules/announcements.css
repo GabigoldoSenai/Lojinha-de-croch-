@@ -1,6 +1,6 @@
 #home,
 #call-to-action{
-    height: 80vh;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -8,6 +8,7 @@
     text-align: start;
     gap: 30px;
     padding-top: 35px;
+    padding-bottom: 60px;
 }
 
 #home{
@@ -17,13 +18,12 @@
 }
 
 #call-to-action>h1{
-    width: 80%;
+    width: 85%;
 }
 
 .announcement{
     margin-top: 20px;
     width: 80%;
-    height: 70%;
     background-color: var(--Light-orange);
     background: 
         url(../../img/Placeholder-banner.png)
@@ -32,30 +32,39 @@
     ;
     background-size: 100% 100%;
     border-radius: 15px;
-    border: 3px solid var(--Brown)
+    border: 3px solid var(--Brown);
+
+    padding-bottom: 27.9%;
+    position: relative;
+    background-color: #e0e0e0; 
 }
 
 .infoContainer{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     justify-content: space-between;
-}
-
-.infoContainer.home{
     margin-bottom: 30px;
     width: 80%;
+    gap: 2%;
+    width: 80%;
+    position: relative;
 }
 
-.infoContainer.home>.info-box{
+.info-box{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    min-width: 20%;
-    width: auto;
+    min-width: auto;
     height: 65px;
+    gap:6px;
+    background-color: var(--Light-green);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
 }
 
-.infoContainer.home>.info-box>.info-icon{
+.info-box>.info-icon{
     font-size: 30px;
     width: 50px;
     height: 50px;
@@ -75,10 +84,25 @@
 }
 
 .info-text>h3{
-    font-size: 0.9rem;
+    font-size: 13px;
     font-weight: 700;
 }
 
 .info-text>p{
-    font-size: 0.8rem;
+    font-size: 12px;
+}
+
+
+@media (max-width: 615px){
+    .infoContainer{
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .info-icon{
+        transform: scale(0.8)
+    }
+
+    .info-text{
+        max-width: auto;
+    }
 }

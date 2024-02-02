@@ -20,21 +20,14 @@
     align-items: center;
     width: 100%;
     gap: 35px;
-    transition: all .3s ease-in-out;
-    transform: translateX(-90px)
 }
 
-
-
 .up-btn {
-    position: relative;
-    opacity: 0;
-    transform: scale(0);
-    transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+    transform: scale(0.5);
+    transition: transform 0.3s ease-in-out;
 }
 
 .up-btn.visible {
-    opacity: 1;
     transform: scale(1);
 }
 
@@ -44,9 +37,15 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .nav-link>img{
-    max-width: 45px;
+    max-width: 40px;
+}
+
+@media (max-width: 845px) {
+    #navbar{
+        display:none;
+    }
 }

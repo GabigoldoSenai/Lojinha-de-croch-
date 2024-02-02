@@ -7,19 +7,21 @@
     flex-direction: column;
 }
 
+
 .catalog{
     place-items: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin: 50px 0;
     gap: 10px;
     width: 90%;
     align-self: center;
 }
 
+
 .cardCrochet{
-    height: 377px;
-    min-width: 198px;
+    height: 335px;
+    min-width: 170px;
     border-radius: 20px;
     border: 3px solid var(--Brown);
     background-color: var(--White);
@@ -57,7 +59,7 @@
 
 .nameCrochet,
 .requestCrochet{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
@@ -90,6 +92,7 @@
     #products-to-request{
         background-color: var(--Light-orange);
         padding: 0 5%;
+        padding-top: 35px;
     }
 
     .categoryCrochet,
@@ -116,17 +119,18 @@
     }
 }
 
-@media (max-width: 425px){
+@media (max-width: 500px){
+
     .requestCrochet{
         font-size: 0.86rem;
     }
 
     .cardCrochet{
-        height: 250px;
-        min-width: 115px;
+        height: 245px;
+        min-width: 110px;
     }
 
     .catalog{
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
 }
