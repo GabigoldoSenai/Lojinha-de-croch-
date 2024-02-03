@@ -115,7 +115,7 @@ function requestCrochet(nameCrochet, categCrochet, priceCrochet, nameClient, qnt
         <div class="textPopup">
             <h1>Total: R$${(priceCrochet * qntCrochet).toFixed(2)}</h1>
             <p>Clique no botão abaixo para mandar sua mensagem automaticamente por WhatsApp</p>
-            <button class="requestCrochet" onclick="closeFinishPopup() window.open('${linkWhatsapp}', '_blank')">
+            <button class="requestCrochet" onclick="closeFinishPopup(); window.open('${linkWhatsapp}', '_blank')">
                 <i class="fa-brands fa-whatsapp"></i>
                 Enviar</button>
         </div>`

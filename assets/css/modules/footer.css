@@ -1,4 +1,67 @@
-#footer{
-    height: 400px;
+#footer {
+    height: auto;
     background-color: var(--Light-green);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 30%));
+    padding: 50px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer>.column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 20px;
+}
+
+.column>li>.btn-section {
+    gap: 18px;
+}
+
+.column>li>.btn-section>.social-media,
+.column>li>.btn-section>.order-crochet {
+    height: 32px;
+    width: 38px;
+    font-size: 16px;
+}
+
+.column>li>.btn-section>.order-crochet {
+    width: 176px;
+}
+
+.column>li>strong {
+    font-weight: 700;
+}
+
+@media (max-width:922px) {
+    .footer-logo {
+        max-width: 300px;
+    }
+
+    #footer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #footer>.column {
+        width: 80%;
+    }
+
+    .column>li>.btn-section {
+        gap: 18px;
+        transform: scale(1)
+    }
+
+    .column>li>.btn-section>.social-media,
+    .column>li>.btn-section>.order-crochet {
+        height: 45px;
+        width: 45px;
+        font-size: 18px;
+    }
+
+    .column>li>.btn-section>.order-crochet {
+        width: 200px;
+    }
 }

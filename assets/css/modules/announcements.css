@@ -89,6 +89,12 @@
     font-size: 12px;
 }
 
+@media (min-width: 1560px){
+    .infoContainer {
+        grid-template-columns: repeat(auto-fill, minmax(230px, 20%));
+    }
+}
+
 @media (max-width: 845px) {
     #home {
         margin-top: 0;
