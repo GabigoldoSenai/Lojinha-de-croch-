@@ -82,6 +82,7 @@
         transform: translateX(-310px);
         flex-direction: column;
         gap: 30px;
+        transition: transform 0.3s ease-in-out;
     }
 
     .navbar-links {

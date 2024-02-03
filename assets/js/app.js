@@ -41,29 +41,29 @@ document.querySelectorAll('#navbar a').forEach(anchor => {
 });
 
 let isMenuOpened = false;
+const navbarElement = document.querySelector("#navbar");
 
 const btnHamburger = document.querySelector("#menuHamburger")
 btnHamburger.addEventListener("click", () => {
-    const navbarElement = document.querySelector("#navbar");
 
     if (window.innerWidth <= 845) {
-        navbarElement.style.transition = "transform 0.3s ease-in-out"
-        navbarElement.style.left = "-310px";
         if (!isMenuOpened) {
-            debugger
             navbarElement.style.transform = "translateX(310px)";
             isMenuOpened = true;
         } else {
             navbarElement.style.transform = "translateX(0)";
             isMenuOpened = false;
         }
-    } else {
-        isMenuOpened = false;
-        navbarElement.style.transform = "translateX(0)";
-        navbarElement.style.transition = "none"
-        navbarElement.style.left = "0";
     }
 });
 
-
+toggleMenu = function () {
+    if (window.innerWidth > 845) {
+        navbarElement.style.left = "0";
+        navbarElement.style.transform = "translateX(0)";
+    } else {
+        navbarElement.style.left = "-310px";
+        isMenuOpened = false
+    }
+}
 window.addEventListener("resize", toggleMenu);
