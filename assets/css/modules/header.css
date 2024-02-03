@@ -1,4 +1,4 @@
-#header{
+#header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -6,21 +6,21 @@
     align-items: center;
 }
 
-.logo-header{
+.logo-header {
     width: 360px;
+}
+
+.device {
+    display: inherit;
     margin-right: 45px;
 }
 
-.device{
-    display: inherit;
-}
-
-.mobile{
+.mobile {
     display: none;
 }
 
 .social-media,
-.order-crochet{
+.order-crochet {
     height: 45px;
     width: 45px;
     font-size: 20px;
@@ -31,13 +31,13 @@
     border: 3px solid var(--brown, #B06338);
     background: var(--orange, #FFAB6F);
     box-shadow: 0px 3px 0px 0px var(--brown, #B06338);
-    position:relative;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.order-crochet{
+.order-crochet {
     width: 215px;
     background-color: var(--Light-green);
     color: var(--Brown);
@@ -47,34 +47,39 @@
 
 
 .social-media:hover,
-.order-crochet:hover{
+.order-crochet:hover {
     top: 1px;
     box-shadow: 0px 2px 0px 0px var(--brown, #B06338);
 }
 
 .social-media:active,
-.order-crochet:active{
+.order-crochet:active {
     top: 3px;
     color: var(--Brown-shadow);
     box-shadow: 0px 0px 0px 0px var(--brown, #B06338);
     background-color: var(--Light-orange);
 }
 
-.btn-section{
+.btn-section {
     display: flex;
     gap: 35px;
 }
 
 @media (max-width: 845px) {
-    .device{
+    .device {
         display: none;
     }
 
-    #header{
+    .btn-section {
+        transform: scale(0.9);
+        margin-top: 10px;
+    }
+
+    #header {
         flex-direction: column;
     }
 
-    .mobile{
+    .mobile {
         display: inherit;
         max-height: 50px;
     }

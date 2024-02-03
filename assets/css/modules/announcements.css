@@ -1,5 +1,5 @@
 #home,
-#call-to-action{
+#call-to-action {
     height: auto;
     width: 100%;
     display: flex;
@@ -11,37 +11,34 @@
     padding-bottom: 60px;
 }
 
-#home{
+#home {
     justify-content: space-between;
     margin-top: 60px;
     padding-bottom: 15px;
 }
 
-#call-to-action>h1{
+#call-to-action>h1 {
     width: 85%;
 }
 
-.announcement{
+.announcement {
     margin-top: 20px;
     width: 80%;
     background-color: var(--Light-orange);
-    background: 
-        url(../../img/Placeholder-banner.png)
-        no-repeat
-        center
-    ;
-    background-size: 100% 100%;
+    background:
+        url(../../img/Placeholder-banner.png) no-repeat center;
+    background-size: cover;
     border-radius: 15px;
     border: 3px solid var(--Brown);
 
     padding-bottom: 27.9%;
     position: relative;
-    background-color: #e0e0e0; 
+    background-color: #e0e0e0;
 }
 
-.infoContainer{
+.infoContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     justify-content: space-between;
     margin-bottom: 30px;
     width: 80%;
@@ -50,21 +47,21 @@
     position: relative;
 }
 
-.info-box{
+.info-box {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     min-width: auto;
     height: 65px;
-    gap:6px;
+    gap: 6px;
     background-color: var(--Light-green);
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 10px;
 }
 
-.info-box>.info-icon{
+.info-box>.info-icon {
     font-size: 30px;
     width: 50px;
     height: 50px;
@@ -76,33 +73,44 @@
     align-items: center;
 }
 
-.info-text{
+.info-text {
     max-width: 60%;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.info-text>h3{
+.info-text>h3 {
     font-size: 13px;
     font-weight: 700;
 }
 
-.info-text>p{
+.info-text>p {
     font-size: 12px;
 }
 
+@media (max-width: 845px) {
+    #home {
+        margin-top: 0;
+        padding: 0;
+    }
+}
 
-@media (max-width: 615px){
-    .infoContainer{
+@media (max-width: 670px) {
+    .infoContainer {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 
-    .info-icon{
+    .announcement{
+        min-height: 500px;
+        padding: 0;
+    }
+
+    .info-icon {
         transform: scale(0.8)
     }
 
-    .info-text{
+    .info-text {
         max-width: auto;
     }
 }

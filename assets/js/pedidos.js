@@ -94,8 +94,6 @@ function knowMore(imgURL, nameCrochet, categCrochet, descCrochet, priceCrochet) 
 
 }
 
-
-
 function requestCrochet(nameCrochet, categCrochet, priceCrochet, nameClient, qntCrochet, typePayment, typeDelivery) {
 
     let message = `Oi! 👋 Meu nome é ${nameClient}, quero fazer o pedido de ${qntCrochet} crochê(s) de ${categCrochet} de ${nameCrochet}. O tipo de entrega que eu quero é ${typeDelivery} e o pagamento será feito com ${typePayment}.`
