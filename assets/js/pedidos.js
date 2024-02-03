@@ -3,14 +3,14 @@
 1. Pessoa clica no botão de pedir que já tem info do Nome, categoria e preço do crochê
 2. Abre um POP-UP com as informações do produto já dadas e uma breve descrição + formulário para ele preencher com os seguintes dados: Nome do cliente, Tipo de entrega e Tipo de pagamento.
 3. A programação pegará todas essas info e transformará em URL com o seguinte template:
-https://api.whatsapp.com/send?phone=+5582988950899&text=
+https:api.whatsapp.com/send?phone=+5582988950899&text=
 
 -> Oi! 👋 Meu nome é ${nameClient}, estou interessado no(a) ${categoryCrochet} de ${nameCrochet}. O tipo de entrega que eu quero é ${typeDelivery} e o pagamento vai ser feito com ${typePayment}
 
 > ENCOMENDA PERSONALIZADA:
 1. Pessoa clica no botão de encomenda e vai ser direcionada para uma página para preencher os dados da encomenda e os dados dela (Categoria, Tema, Nome da pessoa, Tipo de entrega, Tipo de pagamento)
 2. A programação pegará essas info e transformará em URL com o seguinte template:
-https://api.whatsapp.com/send?phone=+5582988950899&text=
+https:api.whatsapp.com/send?phone=+5582988950899&text=
 
 -> Oi! 👋 Meu nome é ${nameClient}, gostaria de encomendar um ${categoryCrochet} com esse tema: ${temaCroche}. O tipo de entrega que eu quero é ${typeDelivery} e o pagamento é ${typePayment}.
 */
@@ -24,11 +24,11 @@ const requestCrochetBtn = document.querySelector("requestCrochet")
 const modal = document.querySelector("dialog")
 
 function knowMore(imgURL, nameCrochet, categCrochet, descCrochet, priceCrochet) {
-    const popupContainer = document.createElement('div');
-    popupContainer.classList.add("requestPopup");
+    const popupContainer = document.createElement('div')
+    popupContainer.classList.add("requestPopup")
 
     const newHTML = `
-        <button class="closePopupBtn" onclick="closePopup()">&times;</button>
+        <button class="closePopupBtn" onclick="closePopup()">&times</button>
         <img src="${imgURL}" class="imgPopup" alt="${nameCrochet}">
         <div class="textPopup">
             <p class="categoryCrochet">${categCrochet}</p>
@@ -60,37 +60,37 @@ function knowMore(imgURL, nameCrochet, categCrochet, descCrochet, priceCrochet) 
                 <button type="button" class="requestCrochet">Criar Pedido</button>
             </form>
         </div>
-    `;
+    `
 
-    popupContainer.innerHTML = newHTML;
+    popupContainer.innerHTML = newHTML
 
-    popupContainer.style.transition = "transform 0.3s, opacity 0.3s";
-    popupContainer.style.opacity = "0"; 
-    popupContainer.style.transform = "translateX(360px)"; 
+    popupContainer.style.transition = "transform 0.3s, opacity 0.3s"
+    popupContainer.style.opacity = "0" 
+    popupContainer.style.transform = "translateX(360px)" 
 
     setTimeout(() => {
-        popupContainer.style.opacity = "1";
-        popupContainer.style.transform = "translateX(0)";
-    }, 10);
+        popupContainer.style.opacity = "1"
+        popupContainer.style.transform = "translateX(0)"
+    }, 10)
 
     popupContainer.addEventListener("click", function(event) {
         if (event.target.classList.contains("requestCrochet")) {
-            const nameClient = document.querySelector(".getNameClient").value;
-            const qntCrochet = document.querySelector(".getQntCrochet").value;
-            const typeDelivery = document.querySelector("#getTypeDelivery").value;
-            const typePayment = document.querySelector("#getTypePayment").value;
+            const nameClient = document.querySelector(".getNameClient").value
+            const qntCrochet = document.querySelector(".getQntCrochet").value
+            const typeDelivery = document.querySelector("#getTypeDelivery").value
+            const typePayment = document.querySelector("#getTypePayment").value
 
 
                 if (!nameClient || nameClient === "null" || !qntCrochet || qntCrochet === "null" ||
             !typeDelivery || typeDelivery === "null" || !typePayment || typePayment === "null") {
-            alert("Por favor, preencha todos os campos corretamente antes de enviar o pedido.");
-            return; 
+            alert("Por favor, preencha todos os campos corretamente antes de enviar o pedido.")
+            return 
         }
-            requestCrochet(nameCrochet, categCrochet, priceCrochet, nameClient, qntCrochet, typePayment, typeDelivery);
+            requestCrochet(nameCrochet, categCrochet, priceCrochet, nameClient, qntCrochet, typePayment, typeDelivery)
         }
-    });
+    })
 
-    document.body.appendChild(popupContainer);
+    document.body.appendChild(popupContainer)
 
 }
 
@@ -98,7 +98,7 @@ function requestCrochet(nameCrochet, categCrochet, priceCrochet, nameClient, qnt
 
     let message = `Oi! 👋 Meu nome é ${nameClient}, quero fazer o pedido de ${qntCrochet} crochê(s) de ${categCrochet} de ${nameCrochet}. O tipo de entrega que eu quero é ${typeDelivery} e o pagamento será feito com ${typePayment}.`
 
-    linkWhatsapp = `https://api.whatsapp.com/send?phone=+5582988950899&text=` + encodeURIComponent(message)
+    linkWhatsapp = `https:api.whatsapp.com/send?phone=+5582988950899&text=` + encodeURIComponent(message)
 
     const finishPopup = document.createElement('div')
     finishPopup.classList.add('finishPopup')
@@ -108,13 +108,13 @@ function requestCrochet(nameCrochet, categCrochet, priceCrochet, nameClient, qnt
         <div class="textPopup">
             <h1>Total: R$${(priceCrochet * qntCrochet).toFixed(2)}</h1>
             <p>Clique no botão abaixo para mandar sua mensagem automaticamente por WhatsApp</p>
-            <button class="requestCrochet" onclick="closeFinishPopup(); window.open('${linkWhatsapp}', '_blank')">
+            <button class="requestCrochet" onclick="closeFinishPopup() window.open('${linkWhatsapp}', '_blank')">
                 <i class="fa-brands fa-whatsapp"></i>
                 Enviar</button>
         </div>`
 
 
-    document.body.appendChild(finishPopup);    
+    document.body.appendChild(finishPopup)    
     finishPopup.innerHTML = newHTML
 
 }
@@ -122,13 +122,13 @@ function requestCrochet(nameCrochet, categCrochet, priceCrochet, nameClient, qnt
 function closePopup() {
     const requestCrochetPopup = document.querySelector(".requestPopup")
 
-    requestCrochetPopup.style.transition = "transform 0.3s, opacity 0.3s";
-    requestCrochetPopup.style.opacity = "0"; 
-    requestCrochetPopup.style.transform = "translateX(100%)"; 
+    requestCrochetPopup.style.transition = "transform 0.3s, opacity 0.3s"
+    requestCrochetPopup.style.opacity = "0" 
+    requestCrochetPopup.style.transform = "translateX(100%)" 
 
     requestCrochetPopup.addEventListener("transitionend", function () {
-        requestCrochetPopup.remove();
-    });
+        requestCrochetPopup.remove()
+    })
 }
 
 function closeFinishPopup(){

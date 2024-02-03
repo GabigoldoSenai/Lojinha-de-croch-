@@ -27,7 +27,7 @@
     background-color: var(--Light-orange);
     background:
         url(../../img/Placeholder-banner.png) no-repeat center;
-    background-size: cover;
+    background-size: 100% 100%;
     border-radius: 15px;
     border: 3px solid var(--Brown);
 

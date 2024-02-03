@@ -37,15 +37,15 @@ function criarCardFirstCatalog(catalogNum, imgURL, categCard, descCard, nameCard
     knowMoreBtn.textContent = "Saiba mais"
     knowMoreBtn.classList.add("requestCrochet")
     knowMoreBtn.addEventListener("click", function() {
-        knowMore( imgURL ,nameCard, categories[categCard], descCard, priceCard);
-    });
+        knowMore( imgURL ,nameCard, categories[categCard], descCard, priceCard)
+    })
 
     if(catalogNum === 1){
         firstCatalog.appendChild(cardElement)
     }else{
         secondCatalog.appendChild(cardElement)
     }
-    
+
     cardElement.appendChild(imgElement)
     cardElement.appendChild(textElement)
     textElement.appendChild(categCardElement)
