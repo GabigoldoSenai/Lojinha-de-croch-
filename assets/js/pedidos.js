@@ -1,25 +1,3 @@
-/* -- Processo de pedido ---
-> CROCHÊ DO CATÁLOGO:
-1. Pessoa clica no botão de pedir que já tem info do Nome, categoria e preço do crochê
-2. Abre um POP-UP com as informações do produto já dadas e uma breve descrição + formulário para ele preencher com os seguintes dados: Nome do cliente, Tipo de entrega e Tipo de pagamento.
-3. A programação pegará todas essas info e transformará em URL com o seguinte template:
-https:api.whatsapp.com/send?phone=+5582988950899&text=
-
--> Oi! 👋 Meu nome é ${nameClient}, estou interessado no(a) ${categoryCrochet} de ${nameCrochet}. O tipo de entrega que eu quero é ${typeDelivery} e o pagamento vai ser feito com ${typePayment}
-
-> ENCOMENDA PERSONALIZADA:
-1. Pessoa clica no botão de encomenda e vai ser direcionada para uma página para preencher os dados da encomenda e os dados dela (Categoria, Tema, Nome da pessoa, Tipo de entrega, Tipo de pagamento)
-2. A programação pegará essas info e transformará em URL com o seguinte template:
-https:api.whatsapp.com/send?phone=+5582988950899&text=
-
--> Oi! 👋 Meu nome é ${nameClient}, gostaria de encomendar um ${categoryCrochet} com esse tema: ${temaCroche}. O tipo de entrega que eu quero é ${typeDelivery} e o pagamento é ${typePayment}.
-*/
-
-/*const nameCrochet = "Circus Baby"
-const categoryCrochet = "Boneca média"
-let escolha = prompt("[A]: Catálogo\n [B]: Encomenda")
-*/
-
 const requestCrochetBtn = document.querySelector("requestCrochet")
 const modal = document.querySelector("dialog")
 let isPopupOpened = false
@@ -102,10 +80,13 @@ function knowMore(imgURL, nameCrochet, categCrochet, descCrochet, priceCrochet) 
 }
 
 function requestCrochet(nameCrochet, categCrochet, priceCrochet, nameClient, qntCrochet, typePayment, typeDelivery) {
+    closePopup()
 
     let message = `Oi! 👋 Meu nome é ${nameClient}, quero fazer o pedido de ${qntCrochet} crochê(s) de ${categCrochet} de ${nameCrochet}. O tipo de entrega que eu quero é ${typeDelivery} e o pagamento será feito com ${typePayment}.`
 
-    linkWhatsapp = `https:api.whatsapp.com/send?phone=+5582988950899&text=` + encodeURIComponent(message)
+
+    // Usa a API Clipboard para copiar o texto para a área de transferência
+    navigator.clipboard.writeText(message)
 
     const finishPopup = document.createElement('div')
     finishPopup.classList.add('finishPopup')
@@ -114,8 +95,8 @@ function requestCrochet(nameCrochet, categCrochet, priceCrochet, nameClient, qnt
         <div class="logoPopup"></div>
         <div class="textPopup">
             <h1>Total: R$${(priceCrochet * qntCrochet).toFixed(2)}</h1>
-            <p>Clique no botão abaixo para mandar sua mensagem automaticamente por WhatsApp</p>
-            <button class="requestCrochet" onclick="closeFinishPopup(); window.open('${linkWhatsapp}', '_blank')">
+            <p>Sua mensagem foi copiada com sucesso! Clique no botão abaixo e cole-a na área de mensagem.</p>
+            <button class="requestCrochet" onclick="closeFinishPopup(); window.open('https://api.whatsapp.com/send?phone=+5582988950899&text=Cole sua mensagem automática aqui!', '_blank')">
                 <i class="fa-brands fa-whatsapp"></i>
                 Enviar</button>
         </div>`
