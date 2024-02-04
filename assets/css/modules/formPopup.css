@@ -64,7 +64,8 @@
 .selectBox> select, 
 .selectBox>select>option{
     outline: none;
-    width: 49%;
+    font-size: 0.66rem;
+    width: 138px;
     background-color: var(--Light-orange);
     cursor: pointer;
 }
