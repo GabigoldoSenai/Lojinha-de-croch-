@@ -20,7 +20,7 @@
 
 
 .cardCrochet{
-    height: 335px;
+    height: 340px;
     min-width: 170px;
     border-radius: 20px;
     border: 3px solid var(--Brown);
@@ -52,14 +52,14 @@
 
 .categoryCrochet,
 .priceCrochet {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color:var(--Orange);
 }
 
 .nameCrochet,
 .requestCrochet{
-    font-size: 1.2rem;
+    font-size:1rem;
     font-weight: 700;
 }
 
