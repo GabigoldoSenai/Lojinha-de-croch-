@@ -38,7 +38,7 @@
 }
 
 .subtitlePopup{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--Brown-shadow)
 }
 
@@ -56,6 +56,7 @@
 
 .requestForm> input,
 .selectBox> select{
+    font-size: 0.66rem;
     border: 2px solid var(--Brown);
     border-radius: 10px;
     padding: 10px 20px;
