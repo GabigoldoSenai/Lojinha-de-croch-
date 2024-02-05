@@ -52,14 +52,14 @@
 
 .categoryCrochet,
 .priceCrochet {
-    font-size: 0.8rem;
+    font-size: 15px;
     font-weight: 600;
     color:var(--Orange);
 }
 
 .nameCrochet,
 .requestCrochet{
-    font-size:1rem;
+    font-size:17px;
     font-weight: 700;
 }
 
