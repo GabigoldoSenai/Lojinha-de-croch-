@@ -56,7 +56,7 @@
 
 .requestForm> input,
 .selectBox> select{
-    font-size: 0.66rem;
+    font-size: 13px;
     border: 2px solid var(--Brown);
     border-radius: 10px;
     padding: 10px 20px;
@@ -65,7 +65,7 @@
 .selectBox> select, 
 .selectBox>select>option{
     outline: none;
-    font-size: 0.66rem;
+    font-size: 13px;
     width: 138px;
     background-color: var(--Light-orange);
     cursor: pointer;
